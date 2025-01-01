@@ -39,7 +39,7 @@ morse_code = {
     '9': '----.'
 }
 
-#user = input("Qué desea transcribir?")
+
 
 def encrypt_letter_to_morse(letter:str)-> str:
     """
@@ -48,20 +48,24 @@ def encrypt_letter_to_morse(letter:str)-> str:
     """
     new_letter = ""
     letter_up =  letter.upper()
-    if letter_up in morse_code:
-        for clave,valor in morse_code.items():
+    
+    for clave,valor in morse_code.items():
             
-            if letter_up == clave:
-                new_letter = valor
-                break
-    else:
-        new_letter = letter
+        if letter_up == clave:
+            new_letter = valor
+            break
+        else:
+            new_letter = letter
 
     return new_letter
 
 
 
 def encrypt_to_morse(word:str)->str:
+    """
+    Función que encripta las palabras y las transforma en 
+    código morse
+    """
     new_word = ""
     remplaced_word = word.replace(" ","")
 
@@ -70,7 +74,19 @@ def encrypt_to_morse(word:str)->str:
     return new_word.strip()
 
 
-print(encrypt_to_morse("ñoñerias"))
- 
+def encrypt_letter_to_plane(code):
+    """
+    Función que encripta los puntos y rallas y los transforma en 
+    texto plano
+    """
+    new_letter = ""
+
+    for clave,valor in morse_code.items():
+        if code  == valor:
+            new_letter = clave
+            break
+        else:
+            new_letter = code
+    return new_letter
 
 
