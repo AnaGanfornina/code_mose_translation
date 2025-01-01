@@ -13,7 +13,8 @@ morse_code = {
     'K': '-.-',
     'L': '.-..',
     'M': '--',
-    'N': '-.',#pon la ñ
+    'N': '-.',
+    'Ñ':' --·--',
     'O': '---',
     'P': '.--.',
     'Q': '--.-',
@@ -63,11 +64,13 @@ def encrypt_letter_to_morse(letter:str)-> str:
 def encrypt_to_morse(word:str)->str:
     new_word = ""
     remplaced_word = word.replace(" ","")
+
     for letter in remplaced_word:
         new_word += encrypt_letter_to_morse(letter) + " "
     return new_word.strip()
 
+
+print(encrypt_to_morse("ñoñerias"))
  
 
 
-#falla porque mete un espacio entre palabra y palabra de mas, pero no en el final ni en el principio
