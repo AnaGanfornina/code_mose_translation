@@ -88,8 +88,16 @@ def encrypt_letter_to_plane(code):
             new_letter = code
     return new_letter
 
-def encrypt_to_plane():
-    pass
+def encrypt_to_plane(code):
+    word_list = code.split("  ")
+    
+    new_word = ""
+    for word in word_list:
+        sign_list = word.split(" ")
+        for sign in sign_list:
+            new_word += encrypt_letter_to_plane(sign) 
+        new_word += " "
+    return new_word.lower().strip()
 
-
-
+print(encrypt_to_plane(".- .-.. -- ..- . .-. --.. ---   -.-. .- ... . .-. ---"))
+#print(encrypt_to_morse("almuerzo casero"))

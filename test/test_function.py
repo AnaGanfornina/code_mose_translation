@@ -24,5 +24,5 @@ def test_encrypt_letter_to_plane():
 def test_encrypt_to_plain():
     assert encrypt_to_plane(".- .-.. -- ..- . .-. --.. ---") == "almuerzo"
     assert encrypt_to_plane("-.-. .- ... . .-. ---") == "casero"
-    assert encrypt_to_plane(".- .-.. -- ..- . .-. --.. --- -.-. .- ... . .-. ---") == "almuerzo casero"
+    assert encrypt_to_plane(".- .-.. -- ..- . .-. --.. ---   -.-. .- ... . .-. ---") == "almuerzo casero"
     
