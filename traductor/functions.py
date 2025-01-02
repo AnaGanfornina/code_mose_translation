@@ -36,7 +36,8 @@ morse_code = {
     '6': '-....',
     '7': '--...',
     '8': '---..',
-    '9': '----.'
+    '9': '----.',
+    ' ': ' '
 }
 
 
@@ -54,8 +55,6 @@ def encrypt_letter_to_morse(letter:str)-> str:
         if letter_up == clave:
             new_letter = valor
             break
-        else:
-            new_letter = letter
 
     return new_letter
 
@@ -65,11 +64,11 @@ def encrypt_to_morse(word:str)->str:
     """
     Función que encripta las palabras y las transforma en 
     código morse
+    Separa cada palabra con doble espacio
     """
     new_word = ""
-    remplaced_word = word.replace(" ","")
 
-    for letter in remplaced_word:
+    for letter in word:
         new_word += encrypt_letter_to_morse(letter) + " "
     return new_word.strip()
 
@@ -88,5 +87,9 @@ def encrypt_letter_to_plane(code):
         else:
             new_letter = code
     return new_letter
+
+def encrypt_to_plane():
+    pass
+
 
 
