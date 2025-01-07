@@ -22,11 +22,22 @@ lbl_title.pack(side=tk.TOP)
 fr_division_0 = tk.Frame(fr_general,width=250, height=500,bg= "grey")
 fr_division_0.place(x=25,y=25)
 
+
 fr_division_1 = tk.Frame(fr_general,width=76, height=500,bg= "blue")
 fr_division_1.place(x=291,y=25)
 
+
 fr_division_2 = tk.Frame(fr_general,width=250, height=500,bg= "red")
 fr_division_2.place(x=385,y=25)
+
+
+#Configuracion labels de morse y plano
+
+lbl_morse = tk.Label(fr_division_0,text="MORSE",anchor = tk.W)
+lbl_morse.place(x=0,y=0)
+
+lbl_plano= tk.Label(fr_division_2,text="PLANO",anchor = tk.W)
+lbl_plano.place(x=0,y=0)
 
 
 
