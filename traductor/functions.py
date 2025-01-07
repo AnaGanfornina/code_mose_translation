@@ -40,8 +40,6 @@ morse_code = {
     ' ': ' '
 }
 
-
-
 def encrypt_letter_to_morse(letter:str)-> str:
     """
     Función que encripta las letras y las transforma en 
@@ -57,8 +55,6 @@ def encrypt_letter_to_morse(letter:str)-> str:
             break
 
     return new_letter
-
-
 
 def encrypt_to_morse(word:str)->str:
     """
@@ -99,5 +95,3 @@ def encrypt_to_plane(code):
         new_word += " "
     return new_word.lower().strip()
 
-print(encrypt_to_plane(".- .-.. -- ..- . .-. --.. ---   -.-. .- ... . .-. ---"))
-#print(encrypt_to_morse("almuerzo casero"))
