@@ -19,13 +19,13 @@ lbl_title.pack(side=tk.TOP)
 
 #Configuración frame dividio en tres
 
-fr_division_0 = tk.Frame(fr_general,width=250, height=570,bg= "grey")
+fr_division_0 = tk.Frame(fr_general,width=250, height=500,bg= "grey")
 fr_division_0.place(x=25,y=25)
 
-fr_division_1 = tk.Frame(fr_general,width=76, height=570,bg= "blue")
+fr_division_1 = tk.Frame(fr_general,width=76, height=500,bg= "blue")
 fr_division_1.place(x=291,y=25)
 
-fr_division_2 = tk.Frame(fr_general,width=250, height=570,bg= "red")
+fr_division_2 = tk.Frame(fr_general,width=250, height=500,bg= "red")
 fr_division_2.place(x=385,y=25)
 
 
